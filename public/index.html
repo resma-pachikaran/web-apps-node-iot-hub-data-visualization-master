@@ -13,14 +13,14 @@
 
   <!-- <title>Temperature &amp; Humidity Real-time Data</title> -->
 
-  <title> Tagwaye Twin</title>
+  <title> Tagwaye Demo</title>
 </head>
 
 <body>
     <h1 class="flexHeader">
      
       <img src="C:\Users\admin\Downloads\CompanyDocDownloads\Hloov Tagwaye Logo Background.png" alt="Tagwaye"height="10" width="10">
-       <H1>  Tagwaye Twin</H1>
+       <H1> Tagwaye Demo</H1>
       <p style="text-align:center;"><b>IFC Viewer</b></p> 
        <input type="file" name="ifc-data" id="ifc-data">
        <button id="visual-btn">Visual</button>
@@ -40,10 +40,20 @@
         <span id="deviceCount">0 devices</span>
         <select id="listOfDevices" class="select_box"></select>
     </span>
+    
 
     <div id="graph-canvas-container">
         <canvas id="iotChart" width =300 height=100 > </canvas> 
     </div>
+   const blobServiceClient = BlobServiceClient.fromConnectionString("DefaultEndpointsProtocol=https;AccountName=demoiotstore;AccountKey=A/jaKL1pMMtRL5AuNiV0D78URrgRhFPBJGf9zvsGHK5dHVFVJLbh8bZ709S8kP1dhHeFFKlz7cskxDMquz7hhQ==;EndpointSuffix=core.windows.net")
+
+   const containerClient=blobServiceClient.getContainerClient('filestore')
+    <form id="form1">
+        <input type="file" name="fileToUpload" id="fileToUpload"/>
+        <input type="button" onclick="uploadFile()" value="Upload" />
+       </form>
+       
+    
     <script src="js/bundle.js"></script>
 </body>
 
